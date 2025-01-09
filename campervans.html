@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campervans Booking</title>
+</head>
+<body>
+    <!-- The widget will be injected here -->
+    <div id="widget-inject"></div>
+
+    <script defer>
+        // Dynamically create the script tag to load the widget
+        const script = document.createElement('script');
+        script.src = "https://app.roaver.com.au/assets/scripts/build/widget.js";
+        script.defer = true;
+        script.setAttribute('data-key', 'mates-rates-travel');
+        script.setAttribute('data-type', 'book');
+        script.setAttribute('data-locale', 'en');
+        script.setAttribute('data-inject', 'widget-inject');
+        script.setAttribute('data-path', '/campervans');  <!-- The path for the widget -->
+
+        // Append the script tag to the document's body to inject the widget
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>
