@@ -8,20 +8,20 @@
 <body>
     <!-- The widget will be injected via JavaScript, so the body remains empty -->
     <script defer>
-        // Dynamically create the script tag to load the widget
-        const script = document.createElement('script');
-        script.src = "https://app.roaver.com.au/assets/scripts/build/widget.js";
-        script.defer = true;
-        script.setAttribute('data-key', 'mates-rates-travel');
-        script.setAttribute('data-type', 'book');
-        script.setAttribute('data-locale', 'en');
-        script.setAttribute('data-inject', 'widget-inject');
-        
-        // Add a data-path parameter, example (replace with your actual path)
-        script.setAttribute('data-path', '/campervans');
-        
-        // Append the script tag to the document's body to inject the widget
-        document.body.appendChild(script);
-    </script>
+    // Dynamically create the script tag to load the widget
+    const script = document.createElement('script');
+    script.src = "https://app.roaver.com.au/assets/scripts/build/widget.js";
+    script.defer = true;
+    script.setAttribute('data-key', 'mates-rates-travel');
+    script.setAttribute('data-type', 'book');
+    script.setAttribute('data-locale', 'en');
+    script.setAttribute('data-inject', 'widget-inject');
+    
+    // Add the correct path: this should match the created bookings page
+    script.setAttribute('data-path', '/campervans');
+    
+    // Append the script tag to the document's body to inject the widget
+    document.body.appendChild(script);
+</script>
 </body>
 </html>
